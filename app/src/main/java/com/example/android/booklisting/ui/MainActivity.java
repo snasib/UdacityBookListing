@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     sb.append(GOOGLE_BOOK_BASE_URL);
                     sb.append(query);
                     sb.append(BOOK_RESULT_COUNT);
-                    mBookUrl = sb.toString();
+                    mBookUrl = sb.toString().replaceAll(" ", "");
                     if (isNetworkAvailable()) {
                         requestUpdate();
                     }
